@@ -1,7 +1,9 @@
+import Header from "./components/Header"
+
 export default function Home() {
-  return (
-    <main>
-      <h1>Student Dashboard</h1>
-    </main>
-  );
+ return (
+  <main>
+    <Header /> 
+  </main>
+ );
 }
