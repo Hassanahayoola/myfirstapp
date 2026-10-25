@@ -1,9 +1,11 @@
-import Header from "./components/Header"
+import Header from "./components/Header";
+import StudentProfile from "./components/StudentProfile";
 
 export default function Home() {
- return (
-  <main>
-    <Header /> 
-  </main>
- );
+  return (
+    <main>
+      <Header />
+      <StudentProfile />
+    </main>
+  );
 }
