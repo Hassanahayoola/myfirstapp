@@ -1,12 +1,6 @@
-import type { Student } from "../types";
+import { student } from "../data";
 
 export default function StudentProfile() {
-  const student: Student = {
-    name: "Ada Okafor",
-    matricNumber: "CSC/2024/001",
-    department: "Cybersecurity",
-  };
-
   return (
     <section>
       <h2>Student Profile</h2>
