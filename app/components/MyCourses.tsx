@@ -1,9 +1,11 @@
+import type { Course } from "../types";
+
 export default function MyCourses() {
-  const courses = [
-    "CYB 201 - Network Security",
-    "CYB 203 - Introduction to Cryptography",
-    "CSC 205 - Data Structures",
-    "GST 211 - Communication Skills",
+  const courses: Course[] = [
+    { code: "CYB 201", title: "Network Security" },
+    { code: "CYB 203", title: "Introduction to Cryptography" },
+    { code: "CSC 205", title: "Data Structures" },
+    { code: "GST 211", title: "Communication Skills" },
   ];
 
   return (
@@ -11,7 +13,9 @@ export default function MyCourses() {
       <h2>My Courses</h2>
       <ul>
         {courses.map((course) => (
-          <li key={course}>{course}</li>
+          <li key={course.code}>
+            {course.code} - {course.title}
+          </li>
         ))}
       </ul>
     </section>

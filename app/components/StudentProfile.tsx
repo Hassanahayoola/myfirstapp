@@ -1,14 +1,18 @@
+import type { Student } from "../types";
+
 export default function StudentProfile() {
-  const name = "Code Hijabi";
-  const matricNumber = "24/COICT/CSS/001";
-  const department = "Cybersecurity";
+  const student: Student = {
+    name: "Ada Okafor",
+    matricNumber: "CSC/2024/001",
+    department: "Cybersecurity",
+  };
 
   return (
     <section>
       <h2>Student Profile</h2>
-      <p>Name: {name}</p>
-      <p>Matric Number: {matricNumber}</p>
-      <p>Department: {department}</p>
+      <p>Name: {student.name}</p>
+      <p>Matric Number: {student.matricNumber}</p>
+      <p>Department: {student.department}</p>
     </section>
   );
 }
