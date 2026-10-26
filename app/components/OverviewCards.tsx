@@ -1,7 +1,11 @@
+import { assignments } from "../data";
+
 export default function OverviewCards() {
-  const totalAssignments = 12;
-  const pendingAssignments = 5;
-  const completedAssignments = 7;
+  const totalAssignments = assignments.length;
+  const completedAssignments = assignments.filter(
+    (assignment) => assignment.completed
+  ).length;
+  const pendingAssignments = totalAssignments - completedAssignments;
 
   return (
     <section>
