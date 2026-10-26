@@ -1,25 +1,24 @@
+import Image from "next/image";
 import { student } from "../data";
 
 export default function StudentProfile() {
-  const initials = student.name
-    .split(" ")
-    .map((part) => part[0])
-    .slice(0, 2)
-    .join("");
-
   return (
     <section className="flex items-center gap-4 rounded-xl bg-white p-6 shadow-sm">
-      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-xl font-bold text-white">
-        {initials}
-      </div>
+      <Image
+        src="/avatar.svg"
+        alt={`Avatar of ${student.name}`}
+        width={80}
+        height={80}
+        className="h-20 w-20 shrink-0 rounded-full ring-4 ring-indigo-100"
+      />
       <div>
         <h2 className="text-lg font-semibold">{student.name}</h2>
         <p className="text-sm text-gray-500">
           Matric No: {student.matricNumber}
         </p>
-        <p className="text-sm text-gray-500">
-          Department: {student.department}
-        </p>
+        <span className="mt-2 inline-block rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+          {student.department}
+        </span>
       </div>
     </section>
   );
