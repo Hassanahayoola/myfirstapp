@@ -7,23 +7,24 @@ export default function OverviewCards() {
   ).length;
   const pendingAssignments = totalAssignments - completedAssignments;
 
+  const cards = [
+    { label: "Total Assignments", value: totalAssignments, color: "text-indigo-600" },
+    { label: "Pending Assignments", value: pendingAssignments, color: "text-amber-500" },
+    { label: "Completed Assignments", value: completedAssignments, color: "text-green-600" },
+  ];
+
   return (
     <section>
-      <h2>Overview</h2>
-
-      <div>
-        <h3>Total Assignments</h3>
-        <p>{totalAssignments}</p>
-      </div>
-
-      <div>
-        <h3>Pending Assignments</h3>
-        <p>{pendingAssignments}</p>
-      </div>
-
-      <div>
-        <h3>Completed Assignments</h3>
-        <p>{completedAssignments}</p>
+      <h2 className="mb-3 text-lg font-semibold">Overview</h2>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {cards.map((card) => (
+          <div key={card.label} className="rounded-xl bg-white p-6 shadow-sm">
+            <h3 className="text-sm font-medium text-gray-500">{card.label}</h3>
+            <p className={`mt-2 text-4xl font-bold ${card.color}`}>
+              {card.value}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
