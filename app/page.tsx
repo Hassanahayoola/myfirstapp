@@ -5,11 +5,13 @@ import MyCourses from "./components/MyCourses";
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-gray-100 text-gray-900">
       <Header />
-      <StudentProfile />
-      <OverviewCards />
-      <MyCourses />
+      <div className="mx-auto max-w-6xl space-y-6 p-6">
+        <StudentProfile />
+        <OverviewCards />
+        <MyCourses />
+      </div>
     </main>
   );
 }
