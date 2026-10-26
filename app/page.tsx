@@ -4,6 +4,7 @@ import StudentProfile from "./components/StudentProfile";
 import OverviewCards from "./components/OverviewCards";
 import MyCourses from "./components/MyCourses";
 import AssignmentsList from "./components/AssignmentsList";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <MyCourses />
         <AssignmentsList />
       </div>
+       <Footer />
     </main>
   );
 }
